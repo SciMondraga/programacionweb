@@ -1,0 +1,224 @@
+* {
+    font-family: Arial;
+}
+
+body {
+    text-align: center;
+}
+
+
+.contenedor {
+    margin: 40px auto auto auto;
+    background-color: lemonchiffon;
+    max-width: 1200px;
+    height: fit-content;
+    border: 5px solid black;
+    display: grid;
+    grid-template-areas:
+        'header header header header'
+        'nombre nombre nombre nombre'
+        'fNacimiento fNacimiento lNacimiento poblacion'
+        'sexo sexo idiomas idiomas'
+        'correo correo correo correo'
+        'egresoPrimaria egresoPrimaria habitos habitos'
+        'ingresos ingresos horario horario'
+    ;
+    gap: 10px;
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+}
+
+.nombre {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    grid-area: nombre;
+}
+
+.fechaNacimiento {
+    grid-area: fNacimiento;
+}
+
+.fechaNacimiento input {
+    margin-left: 20px;
+    height: 25px;
+}
+
+.lugarNacimiento {
+    grid-area: lNacimiento;
+    border-left: 1px solid purple;
+}
+
+.lugarNacimiento select {
+    margin-left: 15px;
+    height: 25px;
+}
+
+.poblacion {
+    grid-area: poblacion;
+}
+
+.sexo {
+    grid-area: sexo;
+    display: grid;
+    grid-template-areas:
+        'sex1 sex1 sex1 sex1'
+        'sex2 sex2 sex3 sex3'
+    ;
+}
+
+.sex1 {
+    grid-area: sex1;
+    text-align: left;
+}
+
+.sex2 {
+    grid-area: sex2;
+    text-align: center;
+}
+
+.sex3 {
+    grid-area: sex3;
+    text-align: center;
+}
+
+.idiomas {
+    grid-area: idiomas;
+    border-left: 1px solid purple;
+}
+
+.correo {
+    grid-area: correo;
+}
+
+
+.egresoPrimaria>input {
+    width: 90%;
+    height: 20%;
+    margin: 5%;
+}
+
+.habitos {
+    grid-area: habitos;
+}
+
+.txtHabitos {
+    width: 90%;
+    height: 100px;
+    margin: 20px;
+}
+
+.ingresos {
+    grid-area: ingresos;
+}
+
+
+.horario {
+    grid-area: horario;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto 20px auto;
+}
+
+.btn {
+    margin: 20px;
+}
+
+.inputNombre {
+    width: 40%;
+    margin: 5%;
+}
+
+.inputFechaN{
+    width: 40%;
+    height: 49px;
+    margin: 5%;
+}
+
+.lblIzq{
+    margin-left: 15px;
+}
+
+.lblMes{
+    margin-top: 20%;
+}
+
+.inputCorreo{
+    margin-left: 5%;
+    width: 25%;
+}
+
+.inputIngresos{
+    width: 90%;
+    margin: 5%;
+}
+
+label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.opc{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+.lblIngresos{
+    width: 98%;
+    margin: 1%;
+    border: 1px solid red;
+    font-size: 0.75em;
+}
+
+
+
+@media (max-width: 1000px) {
+    .contenedor {
+        margin: 40px auto auto auto;
+        background-color: rgb(205, 255, 234);
+        width: fit-content;
+        height: fit-content;
+        border: 5px solid black;
+        display: grid;
+        grid-template-areas:
+            'header'
+            'nombre'
+            'fNacimiento'
+            'lNacimiento'
+            'poblacion'
+            'sexo'
+            'idiomas'
+            'correo'
+            'egresoPrimaria'
+            'habitos'
+            'ingresos'
+            'horario'
+        ;
+        gap: 25px;
+    }
+
+    .input {
+        width: 90%;
+        margin: 5%;
+    }
+
+    .lblPoblacion{
+        margin-left: 15px;
+    }
+
+    .lblMes{
+        margin-top: 0%;
+    }
+
+    .lblIngresos{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+    }
+
+
+ 
+}
